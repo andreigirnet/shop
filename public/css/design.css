@@ -1,0 +1,36 @@
+.StripeElement{
+    background-color: white;
+    padding: 16px 16px;
+    border: 1px solid #ccc;
+}
+.StripeElement--focus{
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+.StripeElement--invalid{
+    border-color: #fa755a;
+}
+.StripeElement--webkit-autofill{
+    background-color: #fefde5 !important;
+}
+#card-errors{
+    color: red;
+}
+#complete-order:disabled{
+    background-color: #4a5568;
+    cursor: not-allowed;
+}
+.active{
+    color: black;
+    font-weight: 600;
+    transform: scale(1.1,1.1);
+}
+.selected{
+    opacity: 0.6;
+}
+#currentImage{
+    opacity:0;
+    transition: opacity .10s ease-in-out;
+}
+#currentImage.active{
+    opacity:1;
+}
