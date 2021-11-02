@@ -44,17 +44,21 @@
                             @endif
                             </a>
                         </div>
-                        <div s class="w-72 bg-white rounded-lg {{Cart::content()->count()>3 ? 'cart-scroll':''}}" @mouseover="cart=!cart" @mouseout="cart = false" style="position: absolute; z-index: 22; bottom: -155px; right: -170px; height: 154px" x-show="cart">
-                            @foreach(Cart::content() as $item)
+                            <div class="w-72 bg-white rounded-lg {{Cart::content()->count()>3 ? 'cart-scroll':''}}" @mouseover="cart=!cart" @mouseout="cart = false" style="position: absolute; z-index: 22; bottom: -155px; right: -170px; height: 154px" x-show="cart">
+                                @if(Cart::content()->count()>1)
+                                    @foreach(Cart::content() as $item)
+                                        <a href="{{route('front.cart')}}">
+                                            <div style="margin-top: 2px; " class=" w-full h-12 flex items-center  hover:bg-red-200">
+                                                <div><img src="{{asset($item->model->image)}}" class="w-16 h-12" alt=""></div>
+                                                <div class="ml-4">{{$item->model->name}}</div>
+                                            </div>
+                                        </a>
+                                    @endforeach
+                                @else
+                                    <div class="text-red-500 ml-12 mt-16">No items currently in the cart</div>
+                                @endif
 
-                                <a href="{{route('front.cart')}}">
-                                    <div style="margin-top: 2px; " class=" w-full h-12 flex items-center  hover:bg-red-200">
-                                        <div><img src="{{asset($item->model->image)}}" class="w-16 h-12" alt=""></div>
-                                        <div class="ml-4">{{$item->model->name}}</div>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
