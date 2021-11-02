@@ -1,0 +1,21 @@
+#container-login{
+    width: 90%;
+    margin-top: 100px;
+}
+.vl{
+    position: absolute;
+    top: 150px;
+    left: 800px;
+    height: 450px;
+    width: 1px;
+    background-color: gray;
+}
+#left-login{
+    width: 40%;
+    height: 400px;
+}
+#right-login{
+    width: 35%;
+    height: 400px;
+}
+

@@ -1,0 +1,56 @@
+@media only screen and (max-width: 1024px) {
+    .lap-image{
+        visibility: hidden;
+    }
+
+}
+.ais-hits{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+}
+.ais-hits--item{
+    border: 2px solid #cdcdcd;
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 1s;
+    cursor: pointer;
+}
+.ais-hits--item:hover{
+    transform: scale(1.1,1.1);
+}
+.ais-search-box input{
+    width: 400px;
+}
+.li-nav{
+    transition:0.5s;
+}
+.wish-counter{
+    top:-3px;
+    right:-10px;
+}
+.cart-counter{
+    top:-3px;
+    right:-10px;
+}
+#right-slide{
+    position: absolute;
+    right: 192px;
+    top: 130px;
+}
+.post-body{
+    transition: 1s;
+    cursor: pointer;
+}
+.post-body:hover{
+    transform: scale(1.1,1.1);
+}
+.cart-scroll{
+    overflow: scroll;
+    overflow-x: hidden;
+}
