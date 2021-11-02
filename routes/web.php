@@ -3,6 +3,7 @@
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ConfirmationController;
 use App\Http\Controllers\CouponController;
+use App\Http\Controllers\ExlpodeController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\SaveForLaterController;
@@ -69,7 +70,7 @@ Route::get('/mailable', function(){
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
+Route::get('/explode',[ExlpodeController::class,'explode']);
 Auth::routes();
 
 
