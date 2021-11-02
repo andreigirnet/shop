@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div id="nav-bar" class="flex justify-between w-full h-20 bg-gray-500 items-center">
+    <div id="nav-bar" class="flex justify-between w-full h-20 bg-black items-center">
         <div class="left flex items-center ml-20" style="margin-left: 100px">
             <a href="{{route('home')}}"> <div class="text-2xl font-bold text-white cursor-pointer " id="title">SHOP</div></a>
             <nav>
